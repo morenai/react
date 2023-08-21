@@ -75,3 +75,30 @@ Es necesario que le pasemos las props “key={todo.text} text={todo.text}” al 
 …
 La prop “Key” funciona como un Identificador para objeto del array y es necesaria cuando utilizamos el metodo .map()
 
+on react {} calls for JS
+
+onClick
+on...  encapsularlos en una function 
+
+```js
+import './CreateTodoButton.css'
+
+function CreateTodoButton(){
+  return(
+      <button 
+        className="CreateTodoButton" 
+        onClick={
+          (event) => {
+            console.log('le diste Click')
+            console.log(event)
+            console.log(event.target)
+          }
+        }
+      >+</button>
+  );
+}
+export  { CreateTodoButton  } 
+
+
+```
+  {/* {[<TodoCounter />, <TodoList />]} */}
