@@ -102,3 +102,10 @@ export  { CreateTodoButton  }
 
 ```
   {/* {[<TodoCounter />, <TodoList />]} */}
+
+Modulo Local Storage:
+Persistencia localStorage is the way to get persistent
+this means cliente would close the app and come back
+data is still avaliable as the last time it was used
+
+Custom Hooks: 
