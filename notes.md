@@ -96,6 +96,25 @@ function CreateTodoButton(){
         }
       >+</button>
   );
+}function useLocalStorage() {
+  const [item, setItem] = React.useState()
+
+  const localStorageTodos = localStorage.getItem('TODOS_V1');
+
+  let parsedTodos;
+  
+  if (!localStorageTodos) {
+    localStorage.setItem('TODOS_V1', JSON.stringify([]));
+    parsedTodos = [];
+  } else {
+    parsedTodos = JSON.parse(localStorageTodos);
+  }
+  
+  const saveItem = (newItem) => {
+    localStorage.setItem('TODOS_V1', JSON.stringify(newItem));
+    
+    setItem(newItem);
+  };
 }
 export  { CreateTodoButton  } 
 
@@ -108,4 +127,33 @@ Persistencia localStorage is the way to get persistent
 this means cliente would close the app and come back
 data is still avaliable as the last time it was used
 
-Custom Hooks: 
+Custom Hooks: inside the useLocalStorage fuctions TODOS became item
+
+Logic reutilization
+
+
+```js
+function useLocalStorage() {
+  const [item, setItem] = React.useState()
+
+  const localStorageTodos = localStorage.getItem('TODOS_V1');
+
+  let parsedTodos;
+  
+  if (!localStorageTodos) {
+    localStorage.setItem('TODOS_V1', JSON.stringify([]));
+    parsedTodos = [];
+  } else {
+    parsedTodos = JSON.parse(localStorageTodos);
+  }
+  
+  const saveItem = (newItem) => {
+    localStorage.setItem('TODOS_V1', JSON.stringify(newItem));
+    
+    setItem(newItem);
+  };
+}
+```
+Folder and file organization:
+g
+
