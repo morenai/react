@@ -155,5 +155,25 @@ function useLocalStorage() {
 }
 ```
 Folder and file organization:
-g
+Stateless vs Stateful
+En App hay que abstraer la UI en un nuevo componente al cual llamaremos con todas las props que necesitemos desde el componente App general.
 
+React.useEffect
+
+```js
+  console.log('Log 1');
+
+  // React.useEffect(() => {
+  //   console.log("Loooooooooooooog 2");
+  // });
+
+  // React.useEffect(() => {
+  //   console.log("Loooooooooooooog 2");
+  // }, []);
+
+    React.useEffect(() => {
+    console.log("Loooooooooooooog 2");
+  }, []);
+
+  console.log('Log 3');
+```
