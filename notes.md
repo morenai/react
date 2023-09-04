@@ -177,3 +177,37 @@ React.useEffect
 
   console.log('Log 3');
 ```
+Loading Skeletons: 
+https://uiverse.io/
+
+react context: 
+
+Recién tuve una entrevista con esa información. Es muy importante ver los términos ya que es algo que se ve comúnmente en react:
+
+Prop Drilling: es una paso del desarrollo que ocurre cuando necesitamos obtener datos que están en varias capas en el árbol de componentes React.
+
+Este se ve siempre cuando pasamos props entre hijos, luego ese a otros hijos y así sucesivamente… la solución es usar context:
+
+Context: es un elemento que podemos crear en React para establecer una comunicación directa entre un componente en un nivel muy alto y uno en un nivel mucho más bajo.
+
+Por ende context permite acceder a los valores de forma directa.
+```js
+import React from "react";
+
+const TodoContext = React.createContext();
+
+function TodoProvider() {
+  return (
+    <TodoContext.Provider> 
+    
+    </TodoContext.Provider> 
+  )
+}
+
+<TodoContext.Provider></TodoContext.Provider>
+<TodoContext.Consumer></TodoContext.Consumer>
+
+export { TodoContext };
+```
+
+useContext
